@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int input();
-int sum(int,int);
-void output(int,int,int);
+int add(int a,int b);
+void output(int a,int b,int sum);
 
 main() {
-  int first,second,ans;
-  first=input();
-  second=input();
-  ans=sum(first, second);
-  output(first, second, ans);
+  int a,b,sum;
+  a=input();
+  b=input();
+  sum=add(a, b);
+  output(a, b, sum);
 }
 
 int input()  {
@@ -19,10 +19,10 @@ int input()  {
   return digit;
 }
 
-int sum(int num1, int num2) {
-  int add;
-  add = num1 + num2;
-  return add;
+int add(int num1, int num2) {
+  int solve;
+  solve = num1 + num2;
+  return solve;
 }
 
 void output(int element1, int element2, int solution) {
