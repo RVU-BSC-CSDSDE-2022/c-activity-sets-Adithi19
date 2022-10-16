@@ -16,13 +16,13 @@ main() {
 
 int input_array_size() {
   int digit;
-  printf("Enter number of elements");
+  printf("Input array size:");
   scanf("%d",&digit);
   return digit;
 }
 void input_array(int n, int a[n]) {
+  printf("Input the array:");
   for(int i=0; i<n; i++) {
-    printf("Enter a number");
     scanf("%d",&a[i]);
   }
 }

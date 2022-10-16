@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 
 float input();
@@ -14,17 +13,27 @@ main(void) {
 
 float input() {
   float digit;
-  printf("Enter a number");
+  printf("Enter number:");
   scanf("%f",&digit);
   return digit;
 }
 
 float square_root(float n) {
-  float sqr;
-  sqr = sqrt(n);
+  float sqr,ini,nw;
+  ini=1.0;
+  while(1) {
+    nw=(ini+(n/ini))/2.0;
+    if(nw==ini) {
+      sqr=nw;
+      break;
+    }
+    else {
+      ini=nw;
+    }
+  }
   return sqr;
 }
 
 void output(float n, float sqrroot) {
-  printf("The square root of %f is %f", n , sqrroot);
+  printf("Square root of %f is %f", n , sqrroot);
 }
