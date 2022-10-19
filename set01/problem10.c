@@ -5,7 +5,7 @@ int stringcompare(char *string1, char *string2);
 void output(char *string1, char *string2, int result);
 
 main() {
-  char string1[20], string2[20];
+  char string1[], string2[];
   int result;
   input_two_strings(&string1, &string2);
   result=stringcompare(string1, string2);
@@ -21,8 +21,9 @@ void input_two_strings(char *string1, char *string2) {
 
 int stringcompare(char *string1, char *string2) {
   int i,res;
+  i=0;
   res=0;
-  for(i=0;i<20;i++) {
+  while(1) {
     if(string1[i]==string2[i]) {
       res=0;
     }
@@ -39,6 +40,7 @@ int stringcompare(char *string1, char *string2) {
     if(string1[i]=='\0' || string2[i]=='\0') {
       break;
     }
+  i++;
   }
   return res;
   }
