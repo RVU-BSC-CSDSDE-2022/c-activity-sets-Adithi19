@@ -12,13 +12,14 @@ void input_n_complex(int n, Complex c[n]);
 Complex add_n_complex(int n, Complex c[n]);
 void output(int n, Complex c[n], Complex result);
 
-main() {
+int main() {
   int n;
   n=get_n();
   Complex c[n],result;
   input_n_complex(n,c);
   result=add_n_complex(n,c);
   output(n,c,result);
+  return 0;
 }
 
 int get_n() {
@@ -53,7 +54,7 @@ void output(int n, Complex c[n], Complex result) {
       printf("%f+%fi is %f+%fi",c[i].real,c[i].imaginary,result.real,result.imaginary);
     }
     else {
-      printf("%f+%fi + ",c[i].real,c[i].imaginary);
+      printf("%f+%fi + \n",c[i].real,c[i].imaginary);
     }
   }
 }

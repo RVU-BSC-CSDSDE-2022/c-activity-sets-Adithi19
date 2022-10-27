@@ -4,12 +4,13 @@ void input_two_strings(char *string1, char *string2);
 int stringcompare(char *string1, char *string2);
 void output(char *string1, char *string2, int result);
 
-main() {
-  char string1[], string2[];
+int main() {
+  char string1[1000], string2[1000];
   int result;
   input_two_strings(&string1, &string2);
   result=stringcompare(string1, string2);
   output(string1, string2, result);
+  return 0;
 }
 
 void input_two_strings(char *string1, char *string2) {
@@ -54,7 +55,7 @@ void output(char *string1, char *string2, int result) {
     printf("%s is greater than %s",string2, string1);
   }
   else if (result==0) {
-    printf("The strings are equal");
+    printf("The strings are equal\n");
   }
 }
 

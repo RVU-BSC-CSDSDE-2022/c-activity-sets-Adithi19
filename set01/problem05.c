@@ -4,13 +4,14 @@ int input();
 int compare(int a, int b, int c);
 void output(int a, int b, int c, int largest);
 
-main() {
+int main() {
   int a, b, c, largest;
   a=input();
   b=input();
   c=input();
   largest=compare(a,b,c);
   output(a,b,c,largest);
+  return 0;
 }
 
 int input() {
@@ -22,18 +23,18 @@ int input() {
 
 int compare(int a, int b, int c) {
   int large;
-  if(a>=b && a>=c) {
+  if(a>b && a>c) {
     large=a;
   }
-  else if(b>=a && b>=c) {
+  else if(b>c) {
     large=b;
   }
-  else if(c>=a && c>=b) {
+  else
     large=c;
-  }
+
   return large;
 }
 
 void output(int a, int b, int c, int largest) {
-  printf("The largest of %d %d and %d is %d",a,b,c,largest);
+  printf("The largest of %d %d and %d is %d\n",a,b,c,largest);
 }

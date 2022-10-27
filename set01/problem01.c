@@ -1,5 +1,7 @@
 #include <stdio.h>
-main()
+
+int main()
 {
   printf("My name is Adithi\n");
+  return 0;
 }

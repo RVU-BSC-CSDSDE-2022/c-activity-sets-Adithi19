@@ -4,13 +4,14 @@ int input();
 void compare(int a, int b, int c, int *largest);
 void output(int a, int b, int c, int largest);
 
-main() {
+int main() {
   int a,b,c,largest;
   a=input();
   b=input();
   c=input();
   compare(a,b,c,&largest);
   output(a,b,c,largest);
+  return 0;
 }
 
 int input() {
@@ -21,17 +22,17 @@ int input() {
 }
 
 void compare(int a, int b, int c, int *largest) {
-  if(a>=b && a>=c) {
+  if(a>b && a>c) {
     *largest=a;
   }
-  else if(b>=c) {
+  else if(b>c) {
     *largest=b;
   }
-  else if(c>=a && c>=b) {
+  else {
     *largest=c;
   }
 }
 
 void output(int a, int b, int c, int largest) {
-  printf("%d",largest);
+  printf("%d\n",largest);
 }

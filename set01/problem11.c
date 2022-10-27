@@ -10,12 +10,13 @@ Complex input_complex();
 Complex add_complex(Complex a, Complex b);
 void output(Complex a, Complex b, Complex sum);
 
-main() {
+int main() {
   Complex a,b,sum;
   a=input_complex();
   b=input_complex();
   sum=add_complex(a,b);
   output(a,b,sum);
+  return 0;
 }
 
 Complex input_complex() {
@@ -33,6 +34,6 @@ Complex add_complex(Complex a, Complex b) {
 }
 
 void output(Complex a, Complex b, Complex sum) {
-  printf("The sum of %f+%fi and %f+%fi is %f+%fi",a.real,a.imaginary,b.real,b.imaginary,sum.real,sum.imaginary);
+  printf("The sum of %f+%fi and %f+%fi is %f+%fi\n",a.real,a.imaginary,b.real,b.imaginary,sum.real,sum.imaginary);
 }
 

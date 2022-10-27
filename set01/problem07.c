@@ -4,11 +4,12 @@ int input_n();
 int sum_n_nos(int);
 void output(int n, int sum);
 
-main() {
+int main() {
   int n, sum;
   n=input_n();
   sum=sum_n_nos(n);
-  output(n,sum);   
+  output(n,sum);  
+  return 0;
 }
 
 int input_n() {
@@ -28,5 +29,5 @@ int sum_n_nos(int x) {
   }
 
 void output(int n, int sum) {
-  printf("The sum of natural numbers till %d is %d",n,sum);
+  printf("The sum of natural numbers till %d is %d\n",n,sum);
 }

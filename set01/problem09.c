@@ -4,11 +4,12 @@ float input();
 float square_root(float n);
 void output(float n, float sqrroot);
 
-main(void) {
+int main(void) {
   float n, sqrroot;
   n=input();
   sqrroot=square_root(n);
   output(n, sqrroot);
+  return 0;
 }
 
 float input() {
@@ -35,5 +36,5 @@ float square_root(float n) {
 }
 
 void output(float n, float sqrroot) {
-  printf("Square root of %f is %f", n , sqrroot);
+  printf("Square root of %f is %f\n", n , sqrroot);
 }

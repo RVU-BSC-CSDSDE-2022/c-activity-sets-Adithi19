@@ -5,13 +5,14 @@ void input_array(int n, int a[n]);
 int sum_n_array(int n, int a[n]);
 void output(int n, int a[n], int sum);
 
-main() {
+int main() {
   int n;
   n=input_array_size();
   int a[n], sum;
   input_array(n, a);
   sum=sum_n_array(n, a);
   output(n,a,sum);
+  return 0;
   }
 
 int input_array_size() {

@@ -4,12 +4,13 @@ int input();
 void add(int a, int b, int *sum);
 void output(int a, int b, int sum);
 
-main() {
+int main() {
   int a,b,sum;
   a=input();
   b=input();
   add(a,b,&sum);
   output(a,b,sum);
+  return 0;
 }
 
 int input() {
@@ -24,5 +25,5 @@ void add(int a, int b, int *sum) {
 }
 
 void output(int a, int b, int sum) {
-  printf("The sum of %d and %d is %d", a, b, sum);
+  printf("The sum of %d and %d is %d\n", a, b, sum);
 }
