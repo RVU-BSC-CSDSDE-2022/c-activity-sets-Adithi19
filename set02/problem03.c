@@ -48,5 +48,5 @@ void find_weight(Camel *c) {
 }
 
 void output(Camel c) {
-  printf("The weight of the camel with radius: %f, height: %f and length: %f is %f", c.radius, c.height, c.length, c.weight);
+  printf("The weight of the camel with radius: %f, height: %f and length: %f is %f \n", c.radius, c.height, c.length, c.weight);
 }
