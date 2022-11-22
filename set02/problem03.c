@@ -1,3 +1,6 @@
+//To to find the weight of a camel, given height, length and stomach radius
+
+#include <math.h>
 #include <stdio.h>
 
 struct camel {
@@ -30,21 +33,10 @@ Camel input() {
 }
 
 void find_weight(Camel *c) {
-  float product,ini,sqr_pro,nw,pi;
-  product=(*c).height * (*c).length;
-  pi =3.14;
-  ini=1.0;
-  while(1) {
-    nw=(ini+(product/ini))/2;
-    if(ini==nw) {
-      sqr_pro=nw;
-      break;
-    }
-    else {
-      ini=nw;
-    }
-  }
-  (*c).weight= pi * ((*c).radius * (*c).radius * (*c).radius) * sqr_pro;
+  float product,pi;
+  product = sqrt(c->height * c->length);
+  pi = 22.0/7.0;
+  c->weight= pi * (c->radius * c->radius * c->radius) * product;
 }
 
 void output(Camel c) {

@@ -1,3 +1,5 @@
+//To find nth number in fibonacci sequence
+
 #include <stdio.h>
 
 int input();

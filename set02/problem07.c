@@ -1,3 +1,5 @@
+//To find out if the name of the camel is a nice name
+
 #include <stdio.h>
 
 void input(char *name);
@@ -10,7 +12,7 @@ int main() {
   input(&name);
   res=has_nice_name(name);
   output(res);
-  result 0;
+  return 0;
 }
 
 void input(char *name) {

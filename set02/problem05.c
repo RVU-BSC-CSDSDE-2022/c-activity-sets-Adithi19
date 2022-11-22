@@ -1,4 +1,7 @@
+//To find borga(x) given x
+
 #include <stdio.h>
+#include <stdlib.h>
 
 int input();
 float borga_x(int x);
@@ -40,7 +43,7 @@ float borga_x(int x) {
     borga=p_product/f_product;
     nw=borga+old;
     power=power+1;
-    if(factorial==x) {
+    if(abs(factorial-x)<0.000001) {
       break;
     }
     factorial=factorial+2;

@@ -1,3 +1,5 @@
+//To find if a triangle is scalene
+
 #include <stdio.h>
 
 int input_side();

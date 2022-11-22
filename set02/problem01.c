@@ -1,3 +1,6 @@
+//To find the distance between two points
+
+#include <math.h>
 #include <stdio.h>
 
 struct _point {
@@ -14,8 +17,8 @@ void output(Point a, Point b, float res);
 int main() {
   Point a,b;
   float res;
-  a=input();
-  b=input();
+  a = input();
+  b = input();
   dist(a, b, &res);
   output(a, b, res);
   return 0;
@@ -23,27 +26,17 @@ int main() {
 
 Point input() {
   Point digit;
-  printf("Enter the points");
+  printf("Enter the points: ");
   scanf("%f%f",&digit.x,&digit.y);
   return digit;
 }
 
 void dist(Point a, Point b, float *res) {
-  float distx,disty,dist,ini,nw;
-  distx=(b.x-a.x)*(b.x-a.x);
-  disty=(b.y-a.y)*(b.y-a.y);
-  dist=distx+disty;
-  ini=1.0;
-  for(;;) {
-    nw=(ini+(dist/ini))/2.0;
-    if(nw==ini) {
-      *res=nw;
-      break;
-    }
-    else {
-      ini=nw;
-    }
-  }
+  float distx,disty,ini,nw,distance;
+  distx = (b.x-a.x)*(b.x-a.x);
+  disty = (b.y-a.y)*(b.y-a.y);
+  distance = distx + disty;
+  *res = sqrt(distance);
 }
 
 void output(Point a, Point b, float res) {

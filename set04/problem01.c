@@ -1,3 +1,5 @@
+//To find the distance between 2 points
+
 #include <stdio.h>
 
 void input(float *x1, float *y1, float *x2, float *y2);

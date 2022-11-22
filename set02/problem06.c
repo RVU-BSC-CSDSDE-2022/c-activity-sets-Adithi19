@@ -1,3 +1,5 @@
+//To find the average of all the odd elements in an array
+
 #include <stdio.h>
 
 int input_n();

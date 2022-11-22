@@ -1,3 +1,5 @@
+//To find the area of a triangle
+
 #include <stdio.h>
 
 typedef struct _triangle {

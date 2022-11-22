@@ -1,4 +1,7 @@
+//To find the weight of a truck load of n camels
+
 #include <stdio.h>
+#include <math.h>
 
 typedef struct _camel {
    float radius, height, length, weight;
@@ -45,23 +48,12 @@ void input(int n, Camel c[n], float *truck_weight) {
 }
 
 void find_camel_weight(int n, Camel c[n]) {
-  float nw,ini,sqr,product,pi;
+  float product,pi;
   pi=3.14;
   int i;
   for(i=0;i<n;i++) {
-    ini=1.0;
-    product=c[i].height * c[i].length;
-    while(1) {
-      nw=(ini + (product/ini))/2.0;
-      if(nw==ini) {
-        sqr=nw;
-        break;
-      }
-      else {
-        nw=ini;
-      }
-    }
-    c[i].weight=pi*(c[i].radius*c[i].radius*c[i].radius)*sqr;
+    product=sqrt(c[i].height * c[i].length);
+    c[i].weight=pi*(c[i].radius*c[i].radius*c[i].radius)*product;
   }
 }
 
