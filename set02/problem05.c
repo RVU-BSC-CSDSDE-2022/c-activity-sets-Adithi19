@@ -1,10 +1,10 @@
 //To find borga(x) given x
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int input();
 float borga_x(int x);
+float power(float y, int p);
 void output(int x, float result);
 
 int main() {
@@ -23,35 +23,32 @@ int input() {
   return num;
 }
 
+float power(float y, int p) {
+  float pow,i;
+  pow=1.0;
+  for(i=1;i<=p;i++) {
+    pow=y*pow;
+  }
+  return pow;
+}
+
 float borga_x(int x) {
-  float borga,nw,old;
-  float power,factorial,f_product,p_product;
-  int k,j;
-  power=1.0;
-  factorial=3.0;
+  float borga,y,fac;
+  int i;
+  fac=1.0;
+  y=0.0;
   borga=0.0;
-  f_product=1.0;
-  p_product=1.0;
+  i=1;
   while(1) {
-    old=borga;
-    for(k=1;k<=power;k++) {
-      p_product=x*p_product;
-    }
-    for(j=1;j<=factorial;j++) {
-      f_product=j*f_product;
-    }
-    borga=p_product/f_product;
-    nw=borga+old;
-    power=power+1;
-    if(abs(factorial-x)<0.000001) {
+    y=power(x,i-1)/fac;
+    fac=fac*(i*2)*(i*2+1);
+    i++;
+    borga=y+borga;
+    if(y<0.000001) {
       break;
     }
-    factorial=factorial+2;
-    f_product=1;
-    p_product=1;
   }
-  nw=nw+1;
-  return nw;
+  return borga;
 }
 
 void output(int x, float result) {
