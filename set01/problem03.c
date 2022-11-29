@@ -23,9 +23,9 @@ int input()  {
 }
 
 int add(int a, int b) {
-  int solve;
-  solve = a + b;
-  return solve;
+  int result;
+  result = a + b;
+  return result;
 }
 
 void output(int a, int b, int sum) {

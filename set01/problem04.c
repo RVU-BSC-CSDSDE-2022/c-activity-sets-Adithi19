@@ -16,10 +16,10 @@ int main() {
 }
 
 int input() {
-  int digit;
+  int number;
   printf("Enter a number: ");
-  scanf("%d", &digit);
-  return digit;
+  scanf("%d", &number);
+  return number;
 }
 
 void add(int a, int b, int *sum) {
